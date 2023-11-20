@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(60, 60, 214);
+             color: black;
+             margin: auto;
+             text-align: center;
+             width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        section{
+            background: rgb(233, 215, 215);
+        }
+    </style>
+</head>
+<body>
+    <header>A N A L I S A D O R  DE  N Ú M E R O S </header>
+    <section>
+        <div>
+            digite um número de 1 a 100: <input type="number" name="n1" id="n1">
+         <input type="button" value="adicionar" id="botao1">
+        </div>
+        <select size="7">
+            <option value="opcao1" >Preencha os Dados
+            </option>
+        </select>
+        <input type="button" value="Finalizar" id="botao2">
+    </section>
+    <script>
+        let botao3 = document.getElementById('#botao1')
+let botao4 = document.getElementById('#botao2')
+botao3.addEventListener('click', analisar)
+botao4.addEventListener('click', finalizar)
+    </script>
+</body>
+</html>

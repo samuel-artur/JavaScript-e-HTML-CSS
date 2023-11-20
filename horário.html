@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+    <style>
+        body{
+            background: sandybrown;
+        }
+        h1{
+            color: white;
+            text-align: center;
+            font: normal 25pt;
+        }
+        p{
+            font: 20pt;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <p id="meuP">agora são </p>
+    <script>
+        var agora = newDate()
+        var hora = agora.getHours()
+        var paragrafo = document.querySelector('#meuP')
+        paragrafo.innerHTML = document.write(`agora são <strong>${hora}</strong> horas`)
+
+    </script>
+</body>
+</html>

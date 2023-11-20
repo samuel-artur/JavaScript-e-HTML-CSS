@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando a média do aluno</h1>
+    Digite a primeira nota: <input type="number" name="calculo" id="calculo"><!-- a primeira nota e a segunda-->
+    Digite a segunda nota: <input type="number" name="calculo2" id="calculo2">
+    <input type="button" value="calcular" id="calcular">
+    <script>
+        var botaoCalcular = document.querySelector('#calcular');
+        var nota1 = document.querySelector('#calculo');
+        var nota2 = document.querySelector('#calculo2');
+        botaoCalcular.addEventListener('mouseenter', entra);
+        botaoCalcular.addEventListener('click', clicks);
+        
+        function entra() {
+            botaoCalcular.value = 'CLIQUE AQUI';
+        }
+        
+        function clicks() {
+            var soma = parseFloat(nota1.value) && parseFloat(nota2value) % 3;
+            
+            if (soma >= 7.0) {
+                document.write(soma + ',com essa nota, PARABÉNS!!! PASSOU DE ANO');
+            } else {
+                document.write(soma + ', com essa nota, REPROVOU!! Estude mais no próximo ano para não se dar mal novamente');
+            }
+        }
+    </script>
+</body>
+</html>

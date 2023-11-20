@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt;
+            text-align: center;
+            background: rgb(48, 36, 218);
+            margin: auto;
+            height: 200px;
+        }
+        section {
+            background-color: white;
+            color: black;
+        }
+        option {
+            color: black;
+        }
+        p#p1{
+          background-color: brown;
+          color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Veja a Tabuada...</h1>
+    <section>
+        <div id="div1">digite um número (positivo ou negativo): <input type="number" name="n1" id="n1"></div>
+        <button onclick="somar()">GERAR TABUADA</button>
+        <select name='somar' id="seltab" size="10">
+            <option id="tab">AGUARDANDO...</option>
+        </select>
+        <p id="p1">PARA GERAR A TABUADA</p><p>digite o numéro de sua preferência, e clique no botão gerar tabuada
+            e aguarde a tabuada aparecer no lugar de 'AGUARDANDO...', pronto
+        </p>
+    </section>
+    <script>
+        function somar() {
+            var num1 = document.getElementById('n1');
+            var div1 = document.getElementById('div1');
+            var tabu = document.getElementById('seltab');
+
+            div1.innerHTML = `aqui para ver tabuada do ${num1.value}`;
+            
+            if (num1.value.length == 0) {
+                window.alert('[ERROR] ESSE NÚMERO FOI INVÁLIDO, DIGITE UM NÚMERO VÁLIDO (5, -1, 18, etc.)');
+            } else {
+                let nume = Number(num1.value);
+                let c = 1;
+                tabu.innerHTML = '';
+
+                while (c <= 10) {
+                    let item = document.createElement('option');
+                    item.text = `o número ${c} x ${nume} = ${nume * c}`;
+                    tabu.appendChild(item);
+                    c++;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
